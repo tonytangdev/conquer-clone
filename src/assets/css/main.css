@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow-1 {
+  text-shadow: 1px 1px #000;
+}
+
+.text-shadow-2 {
+  text-shadow: 2px 2px #000;
+}
