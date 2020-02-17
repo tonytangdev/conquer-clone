@@ -6,6 +6,9 @@
       <Card v-for="card in cards1" :key="card.id" :card="card" />
       <CardImg :card-img="cardImg" />
     </div>
+    <div class="px-8 mt-20">
+      <SmallCard v-for="card in cards2" :key="card.id" :card="card" />
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import Card from './components/Card.vue';
 import CardImg from './components/CardImg.vue';
+import SmallCard from './components/SmallCard.vue';
 
 export default {
   name: 'App',
@@ -21,7 +25,8 @@ export default {
     Navbar,
     Hero,
     Card,
-    CardImg
+    CardImg,
+    SmallCard
   },
   data: () => ({
     cards1: [
@@ -178,7 +183,89 @@ export default {
             'Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.'
         }
       ]
-    }
+    },
+    cards2: [
+      {
+        id: 1,
+        img: {
+          imageUrl: require('./assets/img/4-1.jpg'),
+          imageAlt: 'lac'
+        },
+        title: {
+          text: 'Column One',
+          class: 'text-gray-600'
+        },
+        content: [
+          {
+            id: 1,
+            text:
+              'Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.'
+          }
+        ]
+      },
+      {
+        id: 2,
+        img: {
+          imageUrl: require('./assets/img/4-2.jpg'),
+          imageAlt: 'white mountain'
+        },
+        title: {
+          text: 'Column Two',
+          class: 'text-gray-600'
+        },
+        content: [
+          {
+            id: 1,
+            text:
+              'Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by Unsplash. Thank you for visiting our website. Please come again!'
+          }
+        ],
+        button: {
+          text: 'Read It',
+          class: 'bg-gray-600'
+        }
+      },
+      {
+        id: 3,
+        img: {
+          imageUrl: require('./assets/img/4-3.jpg'),
+          imageAlt: 'beach'
+        },
+        title: {
+          text: 'Column Three',
+          class: 'text-gray-600'
+        },
+        content: [
+          {
+            id: 1,
+            text:
+              'Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.'
+          }
+        ]
+      },
+      {
+        id: 4,
+        img: {
+          imageUrl: require('./assets/img/4-4.jpg'),
+          imageAlt: 'leaves'
+        },
+        title: {
+          text: 'Column Four',
+          class: 'text-gray-700'
+        },
+        content: [
+          {
+            id: 1,
+            text:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.'
+          }
+        ],
+        button: {
+          text: 'Details',
+          class: 'bg-gray-600'
+        }
+      }
+    ]
   })
 };
 </script>
