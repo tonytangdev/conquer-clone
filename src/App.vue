@@ -4,8 +4,7 @@
     <Hero />
     <div class="px-4 mt-20">
       <Card v-for="card in cards1" :key="card.id" :card="card" />
-      Autres
-      <Card v-for="card in cards2" :key="card.title" :card="card" />
+      <CardImg :card-img="cardImg" />
     </div>
   </div>
 </template>
@@ -14,13 +13,15 @@
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import Card from './components/Card.vue';
+import CardImg from './components/CardImg.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
     Hero,
-    Card
+    Card,
+    CardImg
   },
   data: () => ({
     cards1: [
@@ -160,7 +161,24 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    cardImg: {
+      img: {
+        imageUrl: require('./assets/img/bg-2.jpg'),
+        imageAlt: 'mountains'
+      },
+      title: {
+        text: 'Our Services',
+        class: 'text-white'
+      },
+      content: [
+        {
+          id: 1,
+          text:
+            'Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.'
+        }
+      ]
+    }
   })
 };
 </script>
