@@ -3,7 +3,7 @@
     <Navbar />
     <Hero />
     <div class="px-4 mt-20">
-      <Card v-for="card in cards1" :key="card.title" :card="card" />
+      <Card v-for="card in cards1" :key="card.id" :card="card" />
       Autres
       <Card v-for="card in cards2" :key="card.title" :card="card" />
     </div>
@@ -25,6 +25,7 @@ export default {
   data: () => ({
     cards1: [
       {
+        id: 1,
         img: {
           imageUrl: require('./assets/img/1-1.jpg'),
           imageAlt: 'bootstrap'
@@ -46,6 +47,7 @@ export default {
         }
       },
       {
+        id: 2,
         img: {
           imageUrl: require('./assets/img/1-2.jpg'),
           imageAlt: 'responsive'
@@ -67,6 +69,7 @@ export default {
         }
       },
       {
+        id: 3,
         img: {
           imageUrl: require('./assets/img/1-3.jpg'),
           imageAlt: 'parallax'
@@ -88,6 +91,7 @@ export default {
         }
       },
       {
+        id: 4,
         img: {
           imageUrl: require('./assets/img/2-1.jpg'),
           imageAlt: 'two columns'
@@ -110,6 +114,7 @@ export default {
         ]
       },
       {
+        id: 5,
         img: {
           imageUrl: require('./assets/img/2-2.jpg'),
           imageAlt: 'two columns'
@@ -137,6 +142,7 @@ export default {
         }
       },
       {
+        id: 6,
         title: {
           text: 'Two Column Left Side',
           class: 'text-gray-700'
