@@ -9,6 +9,9 @@
     <div class="px-8 mt-20">
       <SmallCard v-for="card in cards2" :key="card.id" :card="card" />
     </div>
+    <div class="px-4">
+      <Card v-for="card in cards3" :key="card.id" :card="card" />
+    </div>
   </div>
 </template>
 
@@ -262,6 +265,35 @@ export default {
         ],
         button: {
           text: 'Details',
+          class: 'bg-gray-600'
+        }
+      }
+    ],
+    cards3: [
+      {
+        id: 1,
+        img: {
+          imageUrl: require('./assets/img/4-5.jpg'),
+          imageAlt: 'cabane'
+        },
+        title: {
+          text: 'One Big Column',
+          class: 'text-gray-700'
+        },
+        content: [
+          {
+            id: 1,
+            text:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.'
+          },
+          {
+            id: 2,
+            text:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.'
+          }
+        ],
+        button: {
+          text: 'Read More',
           class: 'bg-gray-600'
         }
       }
